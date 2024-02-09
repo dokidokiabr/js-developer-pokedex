@@ -1,7 +1,7 @@
 const tabs = document.querySelectorAll('.tab_btn')
 const all_content = document.querySelectorAll('.content')
-let pokemonSelected = []
 
+//manejamento das TABS do menu de informações
 tabs.forEach((tab, index) => {
     tab.addEventListener('click', (e)=>{
 
@@ -18,19 +18,22 @@ tabs.forEach((tab, index) => {
     })
 })
 
-function getClickedElement() {
+//identifica o pokemon selecionado
+function getClickedPokemon() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('clicked');
 }
 
-const clickedElement = getClickedElement();
+const clickedPokemon = getClickedPokemon();
 
+
+//elementos a serem manipulados do HTML
 const header = document.querySelector('.header')
 const about = document.querySelector('.content-about')
 const progressBars = document.querySelectorAll(".progress-value")
 const stats = document.getElementById("stats-numbers")
 
-
+//função para carregamento das informações do pokemon na página
 function loadPokemonItens(clickedElement) {
   pokeApi.getSinglePokemon(clickedElement).then((information) => {
       header.innerHTML += information[0]
@@ -43,7 +46,8 @@ function loadPokemonItens(clickedElement) {
     }
   })
 }
-loadPokemonItens(clickedElement)
+
+loadPokemonItens(clickedPokemon)
 
 
 

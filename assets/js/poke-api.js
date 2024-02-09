@@ -1,6 +1,7 @@
 
 const pokeApi = {}
 
+//conversão de informações para HTML
 function informationConvert(pokemon){
     return [`
     <div class="pokemon ${pokemon.type}">
@@ -37,6 +38,7 @@ function informationConvert(pokemon){
     
 }
 
+//converte todos os detalhes do pokemon numa instância
 function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
     pokemon.number = pokeDetail.id
@@ -65,12 +67,14 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     return pokemon
 }
 
+//requisição de informações de um pokemon para a página inicial
 pokeApi.getPokemonDetail = (pokemon) => {
     return fetch(pokemon.url)
         .then((response) => response.json())
         .then(convertPokeApiDetailToPokemon)
 }
 
+//requisição de vários pokemons pertencentes a página inicial 
 pokeApi.getPokemons = (offset = 0, limit = 5) => {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 
@@ -83,7 +87,7 @@ pokeApi.getPokemons = (offset = 0, limit = 5) => {
 }
 
 
-
+//requisição de um pokemon específico selecionado ao clicar
 pokeApi.getSinglePokemon = (number) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${number}/`
 

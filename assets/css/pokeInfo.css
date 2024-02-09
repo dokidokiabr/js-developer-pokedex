@@ -1,8 +1,3 @@
-body{
-    
-}
-
-
 .normal {
     background-color: #a6a877;
 }
@@ -156,9 +151,6 @@ body{
     top: 15vh;
 }
 
-.nav-menu{
-}
-
 .tab_box{
     display: flex;
     justify-content: space-around;
@@ -281,16 +273,4 @@ body{
         margin: 7px 0;
     }
     
-}
-
-@media screen and (min-width: 380px) {
-}
-
-@media screen and (min-width: 576px) {
-}
-
-@media screen and (min-width: 920px) {
-    .content-about p{
-        /*font-size: 40px;*/
-    }
 }
