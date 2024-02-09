@@ -1,0 +1,296 @@
+body{
+    
+}
+
+
+.normal {
+    background-color: #a6a877;
+}
+
+.grass {
+    background-color: #77c850;
+}
+
+.fire {
+    background-color: #ee7f30;
+}
+
+.water {
+    background-color: #678fee;
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ground {
+    background-color: #dfbf69;
+}
+
+.flying {
+    background-color: #a98ff0;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.dark {
+    background-color: #725847;
+}
+
+.rock {
+    background-color: #b8a137;
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    margin: 10px 0;
+}
+
+.pokemonNumber{
+    text-align: right;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 60px;
+    font-size: 40px;
+    margin: 1rem;
+}
+
+.pokemonName{
+    color: white;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 0.5rem;
+    padding: 0.3rem 1rem;
+    font-size: 3rem;
+}
+
+.detail{
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 40px;
+}
+
+.types{
+    padding: 0;
+    margin: 0;
+    margin-right: 100rem;
+    list-style: none;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-column-gap: 20px;
+}
+
+.type{
+    color: #a7a7a7;
+    padding: 1rem 1rem;
+    margin: .25rem 0;
+    font-size: 1rem;
+    border-radius: 1rem;
+    filter: brightness(1.5);
+    text-align: center;
+}
+
+
+.infoPoke{
+    background-color: #f6f8fc;
+    position: fixed;
+    border-radius: 2rem 2rem 0 0;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    padding: 30px;
+}
+
+.pokemon{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.pokemonPhoto{
+    padding: 0 30px;
+    width: 27rem;
+    display: inline-block;
+    /* margin: auto; */
+    position: absolute;
+    left: 50%;
+    top: 15vh;
+}
+
+.nav-menu{
+}
+
+.tab_box{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #f3f3f3;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+}
+
+.tab_box .tab_btn{
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: none;
+    color: #919191;
+    border: none;
+    cursor: pointer;
+}
+
+.tab_box .tab_btn.active{
+    color: #000;
+}
+
+.content_box{
+    display: flex;
+}
+
+.content_box .content{
+    display: none;
+    animation: moving .5s ease;
+}
+
+@keyframes moving{
+    from{transform: translateX(50px);opacity:0;}
+    to{transform: translateX(0px);opacity: 1;}
+}
+
+.content_box .content.active{
+    display: block;
+}
+
+.content-about, .content-stats{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-stats .info2{
+    font-weight: 600;
+}
+
+.content-about p{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.info1, .info2, .info3{
+    margin: 1rem 0;
+}
+
+.line{
+    position: absolute;
+    border-radius: 10px;
+    top: 42px;
+    left: 24px;
+    width: 61px;
+    height: 5px;
+    background-color: #000;
+    transition: all .3s ease;
+    
+}
+
+.progress-bar {
+    position: relative;
+    width: 30rem;
+    height: 16px;
+    background-color: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 1.1rem;
+}
+
+.progress-value {
+    height: 100%;
+    width: 28rem; /* Initial width, adjust as needed */
+    background-color: #4CAF50; /* Green color */
+    transition: width 0.3s ease; /* Smooth transition for width changes */
+}
+
+.progress-value.warning {
+    background-color: yellow;
+}
+
+.progress-value.danger {
+    background-color: red;
+}
+
+@media screen and (max-height: 820px) {
+    .pokemonPhoto{
+        width: 17rem;
+        margin: 30;
+        top: 10vh;
+    }
+
+    .infoPoke{
+        height: 300px;
+    }
+
+    .content-about p{
+        font-size: 20px;
+    }
+
+    .progress-bar{
+        margin: 0.6rem;
+    }
+
+    .info1, .info2, .info3{
+        margin: 0;
+    }
+
+    .content-stats p{
+        margin: 7px 0;
+    }
+    
+}
+
+@media screen and (min-width: 380px) {
+}
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 920px) {
+    .content-about p{
+        /*font-size: 40px;*/
+    }
+}

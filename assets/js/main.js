@@ -7,19 +7,21 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
+        <a href=poke.html?clicked=${pokemon.number}>
+            <li class="pokemon ${pokemon.type}">
+                <span class="number">#${pokemon.number}</span>
+                <span class="name">${pokemon.name}</span>
 
-            <div class="detail">
-                <ol class="types">
-                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                </ol>
+                <div class="detail">
+                    <ol class="types">
+                        ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                    </ol>
 
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
-            </div>
-        </li>
+                    <img src="${pokemon.photo}"
+                        alt="${pokemon.name}">
+                </div>
+            </li>
+        </a>
     `
 }
 
@@ -29,6 +31,7 @@ function loadPokemonItens(offset, limit) {
         pokemonList.innerHTML += newHtml
     })
 }
+
 
 loadPokemonItens(offset, limit)
 
@@ -45,3 +48,22 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+
+
+
+
+
+/*
+function pokemonClickListener(){
+    const clickPokemon = document.getElementById("pokeClick")
+clickPokemon.addEventListener('click', (event) => {
+
+    const pokemonName = clickPokemon.getElementsByClassName("name").item(0);
+    console.log(pokemonName);
+    localStorage.setItem('pokemonName', pokemonName)
+    window.location.href ="poke.html";
+
+    }
+)
+}*/

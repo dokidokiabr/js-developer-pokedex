@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Normalize CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+     integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/pokeInfo.css">
+</head>
+<body>
+    <div class="header">
+        
+    </div>
+    <div class="infoPoke">
+        <nav class="nav-menu">
+            <div class="tab_box">
+                <button class="tab_btn active">About</button>
+                <button class="tab_btn">Base Stats</button>
+                <div class="line"></div>
+            </div>
+            <div class="content_box">
+                <div class="content active">
+                    <div class="content-about">
+                        <div class="info1">
+                            <p>Height</p>
+                            <p>Weight</p>
+                            <p>Abilities</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="content">
+                    <div class="content-stats">
+                        <div class="info1">
+                            <p>HP</p>
+                            <p>Attack</p>
+                            <p>Defense</p>
+                            <p>Sp. Atk</p>
+                            <p>Sp. Def</p>
+                            <p>Speed</p>
+                        </div>
+
+                        <div id="stats-numbers" class="info2">
+                            
+                        </div>
+
+                        <div class="info3">
+                            <!--
+                            <div class="progress-bars">
+                                <div id="progressHP" class="progress-value"></div>
+                                <div id="progressAttack" class="progress-value"></div>
+                                <div id="progressDefense" class="progress-value"></div>
+                                <div id="progressSpAtk" class="progress-value"></div>
+                                <div id="progressSpDef" class="progress-value"></div>
+                                <div id="progressSpeed" class="progress-value"></div>
+                                <div id="progressTotal" class="progress-value"></div>
+                            </div>-->
+                            <div class="progress-bar">
+                                <div id="progressHP" class="progress-value"></div>
+                            </div>
+                            <div class="progress-bar">
+                                <div id="progressAttack" class="progress-value"></div> 
+                            </div> 
+                            <div class="progress-bar">
+                                <div id="progressDefense" class="progress-value"></div>
+                            </div>
+                            <div class="progress-bar">
+                                <div id="progressSpAtk" class="progress-value"></div>
+                            </div>
+                            <div class="progress-bar">
+                                <div id="progressSpDef" class="progress-value"></div>
+                            </div>
+                            <div class="progress-bar">
+                                <div id="progressSpeed" class="progress-value"></div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+    </div>
+    <script src="assets/js/pokemon-model.js"></script>
+    <script src="assets/js/progress-bars.js"></script>
+    <script src="/assets/js/poke-api.js"></script>
+    <script src="assets/js/poke-check.js"></script>
+</body>
+</html>
